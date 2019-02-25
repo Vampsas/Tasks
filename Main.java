@@ -12,34 +12,34 @@ public class Main {
 
         System.out.println("Enter symbol (+, -, %, * or /) and two numbers separeted by spaces :");
 
-        String tekst;
+        String text;
 
-        while((tekst = sc.readLine()) != null && tekst.length() > 0) {
+        while((text = sc.readLine()) != null && text.length() > 0) {
 
-            ArrayList<String> list = new ArrayList<String>(Arrays.asList(tekst.split(" ")));
+            ArrayList<String> list = new ArrayList<String>(Arrays.asList(text.split(" ")));
 
-            char znak =list.get(0).charAt(0);
+            char symbol = list.get(0).charAt(0);
 
-            int liczba1 = Integer.parseInt(list.get(1));
-            int liczba2 = Integer.parseInt(list.get(2));
-            int suma, roznica, iloczyn, iloraz, reszta;
+            int num1 = Integer.parseInt(list.get(1));
+            int num2 = Integer.parseInt(list.get(2));
+            int sum, substraction, multi, division, rest;
 
-           switch (znak){
+           switch (sumbol){
 
-               case '+' : suma = liczba1 + liczba2;
-                   System.out.println(suma);
+               case '+' : sum = num1 + num2;
+                   System.out.println(sum);
                    break;
-               case '-': roznica = liczba1 - liczba2;
-                   System.out.println(roznica);
+               case '-': substraction = num1 - num2;
+                   System.out.println(substraction);
                    break;
-               case '*': iloczyn = liczba1 * liczba2;
-                   System.out.println(iloczyn);
+               case '*': multi = num1 * num2;
+                   System.out.println(multi);
                    break;
-               case '/': iloraz = liczba1 / liczba2;
-                   System.out.println(iloraz);
+               case '/': division = num1 / num2;
+                   System.out.println(division);
                    break;
-               case '%': reszta = liczba1 % liczba2;
-                   System.out.println(reszta);
+               case '%': rest = num1 % num2;
+                   System.out.println(rest);
                    break;
 
                    default: break;
